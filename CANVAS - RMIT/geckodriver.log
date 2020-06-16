@@ -92,3 +92,36 @@ JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 196: Error: 
 JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 196: Error: Invalid autocomplete selectedIndex
 JavaScript error: resource://gre/modules/LoginManagerChild.jsm, line 174: NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS: [JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 196}]'[JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 196}]' when calling method: [nsIAutoCompletePopup::selectedIndex]
 1592282604195	Marionette	INFO	Stopped listening on port 33779
+1592294911887	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile53SFxj"
+1592294914269	Marionette	INFO	Listening on port 43085
+1592294914296	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 196: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 196: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/modules/LoginManagerChild.jsm, line 174: NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS: [JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 196}]'[JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 196}]' when calling method: [nsIAutoCompletePopup::selectedIndex]
+JavaScript error: https://myapps.rmit.edu.au/nidp/saml2/sso?SAMLRequest=fVJNT8IwGL77K5bet3UDxmi2JQgxkqAuMD14MbXroMnWzr6tyr%2B3DI14kKSnt8%2FX%2B7QZ0K7tydyavdzwN8vBeJ9dK4EMFzmyWhJFQQCRtONADCPb%2Bd2axAEmvVZGMdWiM8plBgXg2gglkbda5ugljSYNS2vm43Qy8sc0wf4sjpifzHBDx8l4GkcJ8p64BsfJkZNwRADLVxIMlcaNcIx9nPhRUuGUuDOaPiNv6fYQkpqBtTemBxKG3YH2PQS6EybgtQ2oDaWo%2B%2FAYOw4BFPLmP%2FkWSoLtuN5y%2FS4Yf9ysf3UGAeECaMuM1TxgqgtbtRNykEJe%2Bd3LtZC1kLvLlbyeQEBuq6r0y4dthYrsqEOGRXVxtP3PdYiehefw7PSi985otSxVK9jBu1G6o%2Bb%2FHFEQDRNR%2B80AJVZCz5loBK9dK22rPhaaU8Nz5Pw5CouT6d%2BfU1x9AQ%3D%3D, line 49: TypeError: md is undefined
+1592295196551	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileFBhCyN"
+1592295199112	Marionette	INFO	Listening on port 43195
+1592295199170	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://myapps.rmit.edu.au/nidp/saml2/sso?SAMLRequest=fVLPT8IwFL77Vyy9byswYDRsCUKMJKgE0IMXU7o3aLK1s69V%2Be8tQyMe4Pr6%2FXrf6xh5XTVs4uxereDdAdrgq64UsvYhI84opjlKZIrXgMwKtp48LFg3oqwx2mqhK3JGuc7giGCs1IoE81lG3oqU0uFoWIb9VECYiGQbjniShGm%2F3A57feilgpLgBQx6Tka8hCciOpgrtFxZP6JdGtJB2BlsaMo6PdalrySY%2BT2k4rZl7a1tkMVxfeBNg5GppY2gcBF3sZJFEx9jd2NETYLJb76pVuhqMGswH1LA82rxp9MKSB%2FAOGGdgUjoOq70TqpWigTLn15upSqk2l2vZHsCIbvfbJbh8mm9Ifn4qMPaRU1%2BtL3k2kYfx%2Bfw8emij95oPlvqSopDcKdNze3lHJ2o005kEZYtlDmFDQhZSih8K1WlP6cGuIWMeH8gcX4y%2Ff9z8ptv, line 49: TypeError: md is undefined
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 196: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 196: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/modules/LoginManagerChild.jsm, line 174: NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS: [JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 196}]'[JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 196}]' when calling method: [nsIAutoCompletePopup::selectedIndex]
+1592295260321	Marionette	INFO	Stopped listening on port 43195
+1592295261107	Marionette	INFO	Stopped listening on port 43085
+1592295343538	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileMpDkbQ"
+1592295346028	Marionette	INFO	Listening on port 41015
+1592295346086	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://myapps.rmit.edu.au/nidp/saml2/sso?SAMLRequest=fVJLTwIxEL77Kza97wt3QRogQYiRBHUDqwcvpnRnocluu3ZalX9vKRrxANfp95pvOkLWNh2dWrOTK3i3gCb4ahuJ1D%2BMidWSKoYCqWQtIDWcrqcPS9qLEtppZRRXDTmhXGYwRNBGKEmCxXxM3uosS1l%2BDWHGs2GYAePhkPM8zPOqGgyyXrphNQleQKPjjImTcERECwuJhknjRkkvCZN%2BmPbL5IamOc0GrySYuz2EZMazdsZ0SOO43bOuw0i3wkRQ2YjZWIqqiw%2BxezGiIsH0N99MSbQt6DXoD8HhebX80%2FECwgXQlhurIeKqjRu1FdJLkaD46eVWyErI7eVKNkcQ0vuyLMLiaV2SyeigQ%2F2ienKwPefqo4%2FiU%2FjoeNFHZ7SYF6oRfB%2FcKd0ycz5HGqV%2BIqqw9lBqJXbARS2gcq00jfqcaWAGxsT5A4knR9P%2FP2dy9Q0%3D, line 49: TypeError: md is undefined
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 196: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 196: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/modules/LoginManagerChild.jsm, line 174: NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS: [JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 196}]'[JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 196}]' when calling method: [nsIAutoCompletePopup::selectedIndex]
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+1592295417978	Marionette	INFO	Stopped listening on port 41015
+1592295735019	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilemsdzaT"
+1592295737556	Marionette	INFO	Listening on port 34337
+1592295737663	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://myapps.rmit.edu.au/nidp/saml2/sso?SAMLRequest=fVJNT8IwGL77K5bet%2B4D%2BWjYEoQYSVAXmB68mK4r0GRtZ99W5d9bhkY8yKWHt8%2FX%2B7RToLLtyMzZvVrzN8fBBp%2ByVUD6ixw5o4imIIAoKjkQy8hmdr8iaRSTzmirmW7RGeUygwJwY4VWKFgucvSa1QMaZ6MmrOPRIBzUdRrWjT%2BybUrHjCbZ9WSIgmduwHNy5CU8EcDxpQJLlfWjOI3DeBgmwyoekzQlyeQFBQu%2Fh1DU9qy9tR0QjOWBdh1ERgob8cZF1GElmg4fY6cYQKNg9pNvrhU4yc2Gm3fB%2BNN69avTCwgfwDhmneER0xK3eidUL4WC8ruXG6EaoXaXK6lPICB3VVWG5eOmQsX0qEP6RU1xtP3PtY8%2Bxefw6elFH7zRclHqVrBDcKuNpPb%2FHEmU9BPRhNseSpyCjjOxFbzxrbSt%2FpgbTi3PkffnCBcn078%2Fp7j6Ag%3D%3D, line 49: TypeError: md is undefined
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 196: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 196: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/modules/LoginManagerChild.jsm, line 174: NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS: [JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 196}]'[JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 196}]' when calling method: [nsIAutoCompletePopup::selectedIndex]
+1592296065143	Marionette	INFO	Stopped listening on port 34337

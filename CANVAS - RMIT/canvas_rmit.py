@@ -46,8 +46,10 @@ for course in courses_JSON:
     courses[course['course_code']] = course['name']
     course_ids[course['id']] = course['name']
 
+#   Directory that will store all of the JSON data files
+JSON_DIR = Path.cwd()/'JSON'
 #   Write the course_ids to JSON file for later use and reference.
-with open('courseInfo.json', 'w') as file:
+with open(Path(JSON_DIR/'courseInfo.json'), 'w') as file:
     json.dump(course_ids,file)
 
 #   Create folders for each course
@@ -67,8 +69,8 @@ for courseCode in courses.keys():
 #   Get a list of modules and create dictionary for them
 
 #   Load the JSON info to extract the course IDs
-JSON_DIR = Path.cwd()/'JSON'
-with open(JSON_DIR/'courseInfo.json','r') as file:
+os.makedirs(JSON_DIR,exist_ok='true')
+with open(Path(JSON_DIR/'courseInfo.json'),'r') as file:
     courseIDs = json.load(file)
 
 print('Getting a list of modules for each course and writing it to file...')
@@ -81,12 +83,12 @@ for id in courseIDs.keys():
     course_modules[id] = json.loads(res.text)
 
     #   Write the course_modules data for the current course to file.
-    with open(JSON_DIR/'course_modules_{}.json'.format(id),'w') as file:
+    with open(Path(JSON_DIR/'course_modules_{}.json'.format(id)),'w') as file:
         json.dump(course_modules[id], file)
 
 #       TEST
 #   For the 'Week 4 - Intro to Programming (64796)' get all the items
-with open(JSON_DIR/'course_modules_64796.json') as file:
+with open(Path(JSON_DIR/'course_modules_64796.json')) as file:
     course_module = json.load(file)
 
 
@@ -114,9 +116,13 @@ password = driver.find_element_by_id('Ecom_Password')
 password.send_keys('S3pt3mb3r90')
 password.send_keys(Keys.RETURN)
 try:
-    #   Find the element with attribute 'data-api-returntype="File"'
+    #   Find the downloadable files
     wait.until(EC((By.CLASS_NAME,'instructure_file_link')))
-    fileLink = driver.find_element_by_class_name('instructure_file_link')
-    print(fileLink.get_attribute('href'))
+    fileLinkElem = driver.find_element_by_class_name('instructure_file_link')
+    fileURL_API = fileLinkElem.get_attribute('data-api-endpoint')
+    #print(fileLink.get_attribute('href'))
+
+    #   TODO - Download the file
+
 except Exception as exc:
     print('Error! Message: %s' % exc)
