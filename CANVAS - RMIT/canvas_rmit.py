@@ -67,7 +67,8 @@ for courseCode in courses.keys():
 #   Get a list of modules and create dictionary for them
 
 #   Load the JSON info to extract the course IDs
-with open('courseInfo.json','r') as file:
+JSON_DIR = Path.cwd()/'JSON'
+with open(JSON_DIR/'courseInfo.json','r') as file:
     courseIDs = json.load(file)
 
 print('Getting a list of modules for each course and writing it to file...')
@@ -80,12 +81,12 @@ for id in courseIDs.keys():
     course_modules[id] = json.loads(res.text)
 
     #   Write the course_modules data for the current course to file.
-    with open('course_modules_{}.json'.format(id),'w') as file:
+    with open(JSON_DIR/'course_modules_{}.json'.format(id),'w') as file:
         json.dump(course_modules[id], file)
 
 #       TEST
 #   For the 'Week 4 - Intro to Programming (64796)' get all the items
-with open('course_modules_64796.json') as file:
+with open(JSON_DIR/'course_modules_64796.json') as file:
     course_module = json.load(file)
 
 
