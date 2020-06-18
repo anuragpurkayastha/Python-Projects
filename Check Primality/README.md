@@ -3,5 +3,5 @@ This program takes an input number from the user and checks if the number is pri
 
 # Usage
 ```python
-python CheckPimalityFunction.py
+python CheckPrimalityFunction.py
 ```
