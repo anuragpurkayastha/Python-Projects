@@ -1,5 +1,0 @@
-TITLE: "I'm doing totally fine."
-POST DATE: 26/06/2020
-
-DESCRIPTION:
-None
