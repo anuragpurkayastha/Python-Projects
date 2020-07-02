@@ -125,3 +125,11 @@ JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 196: Error: 
 JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 196: Error: Invalid autocomplete selectedIndex
 JavaScript error: resource://gre/modules/LoginManagerChild.jsm, line 174: NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS: [JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 196}]'[JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 196}]' when calling method: [nsIAutoCompletePopup::selectedIndex]
 1592296065143	Marionette	INFO	Stopped listening on port 34337
+1593670692635	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileu2v6e1"
+1593670695146	Marionette	INFO	Listening on port 37189
+1593670695243	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 208: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 208: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/modules/LoginManagerChild.jsm, line 174: NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS: [JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 208}]'[JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 208}]' when calling method: [nsIAutoCompletePopup::selectedIndex]
+JavaScript error: https://myapps.rmit.edu.au/nidp/saml2/sso?SAMLRequest=fVJNT8IwGL77K5be9wkMaMYShBhJUBeYHryY0r1Ak62dfVuVf28ZGvEAlx7ePl%2Fv02bImrqlU2v2cgXvFtB4X00tkXYXE2K1pIqhQCpZA0gNp%2Bvpw5ImQURbrYziqiZnlOsMhgjaCCWJt5hPyBtUKd%2BwUeoPUqj8%2FsYdm3Gv5w8hjRjvj6t4kBLvBTQ6zoQ4CUdEtLCQaJg0bhQlkR8N%2FSgpo5TGI5pEr8Sbuz2EZKZj7Y1pkYZhc2Bti4FuhAmgsgGzoRRVGx5jJyGiIt70N99MSbQN6DXoD8HhebX80%2BkEhAugLTdWQ8BVE9ZqJ2QnRbzip5dbISshd9cr2ZxASO%2FLsvCLp3VJ8uyoQ7tFdX60veTaRc%2FCc3h2etFHZ7SYF6oW%2FODdKd0wczlHHMTdRFT%2BtoNSK7EFLrYCKtdKXavPmQZmYEKcP5AwP5n%2B%2Fzn5zTc%3D, line 49: TypeError: md is undefined
+1593670766768	Marionette	INFO	Stopped listening on port 37189
