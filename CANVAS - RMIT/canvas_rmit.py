@@ -6,20 +6,11 @@
 #   Import modules
 import os, requests, json
 from pprint import pprint
-from pathlib import Path
-
-#   SELENIUM
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support.expected_conditions import presence_of_element_located as EC
-from selenium.webdriver.firefox.options import Options
-from bs4 import BeautifulSoup
+from pathlib import Path, PureWindowsPath
 from pprint import pprint
 
 #   Credentials
-CANVAS_SECRET = os.getenv('CANVAS_SECRET')
+CANVAS_SECRET = # Insert Bearer Token here
 
 headers = {
   'Authorization': 'Bearer %s' % CANVAS_SECRET
@@ -47,16 +38,20 @@ for course in courses_JSON:
     courses[course['course_code']] = course['name']
     course_ids[course['id']] = course['name']
 
+#pprint(courses)
+#pprint(course_ids)
+
 #   Create folders for each course
 print('Creating course folders...')
 #   Create a folder to store the course folders in
-uni_folder = Path.cwd()/'2020 Semester 2'
-os.makedirs(uni_folder,exist_ok='true')
+windowsPath = PureWindowsPath(r"D:/OneDrive - RMIT University/2020 Semester 2")
+UNI_DIR = Path(windowsPath.as_posix())
+os.makedirs(UNI_DIR,exist_ok='true')
 
 #   For each course, create 'Lecture', 'Assignments' and 'Labs' folders
 for courseCode in courses.keys():
     #   Course Code - Course Name folder
     folder_name = '{} - {}'.format(courseCode,courses[courseCode])
-    os.makedirs(uni_folder/folder_name/'Lectures',exist_ok='true')
-    os.makedirs(uni_folder/folder_name/'Assignments',exist_ok='true')
-    os.makedirs(uni_folder/folder_name/'Labs',exist_ok='true')
+    os.makedirs(UNI_DIR/folder_name/'Lectures',exist_ok='true')
+    os.makedirs(UNI_DIR/folder_name/'Assignments',exist_ok='true')
+    os.makedirs(UNI_DIR/folder_name/'Labs',exist_ok='true')

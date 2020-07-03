@@ -24,7 +24,7 @@ def getNewFilename(absImagePath, seqNo):
     fileExt = os.path.splitext(basename)[1]
     
     #   Leading filename text - CHANGE ACCORDING TO NEEDS
-    leadingText = 'CHANGE LEADING TEXT OF FILE'
+    leadingText = 'Aneekas Fourth Month'
     
     try:
         #   Open the image to extract the EXIF data and get the date the picture was taken
@@ -66,7 +66,7 @@ def getNewFilename(absImagePath, seqNo):
 if __name__ == '__main__':
     
     #   Directory containing the images to rename - CHANGE AS REQUIRED
-    windowsPath = PureWindowsPath(r"/path/to/directory/")   #   Required on Windows platforms.
+    windowsPath = PureWindowsPath(r"/path/to/folder/")   #   Required on Windows platforms.
     IMAGE_DIR = Path(windowsPath.as_posix())
 
     #   Loop through each item in the directory and rename the item if it is a file.
