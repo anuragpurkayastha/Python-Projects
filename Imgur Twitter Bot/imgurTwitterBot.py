@@ -23,7 +23,7 @@ def sendNotification(link):
 	api = tweepy.API(auth, wait_on_rate_limit=True,
 	    wait_on_rate_limit_notify=True)
 
-	api.update_status(r"Today's top post: %s" % link)
+	api.update_status(r"Today's top post from Imgur: %s" % link)
 
 def getTopPostURL():
 	'''
@@ -31,7 +31,6 @@ def getTopPostURL():
 	'''
 	#   Authorization creds to use IMGUR_API - obtain from environment variables
 	CLIENT_ID = os.getenv('IMGUR_CLIENT_ID')
-	CLIENT_SECRET = os.getenv('IMGUR_CLIENT_SECRET')
 
 	headers = {
 	  'Authorization': 'Client-ID %s' % CLIENT_ID
@@ -49,6 +48,25 @@ def getTopPostURL():
 	#	Return the link to the post
 	return galleryData['data']['items'][0]['link']
 
+def shortenURL(url):
+	"""
+		Shorten the url
+	"""
+	headers = {
+	  'Authorization': 'Bearer %s' % os.getenv('BITLY_ACCESS_TOKEN'),
+	  'Content-Type': 'application/json'
+	}
+
+	payload = {
+		'long_url': url
+	}
+
+	res = requests.request('POST','https://api-ssl.bitly.com/v4/shorten',headers=headers,json=payload)
+	res.raise_for_status()
+	resData = json.loads(res.text)
+
+	return resData['link']
+
 #   MAIN
 if __name__ == '__main__':
 
@@ -57,5 +75,4 @@ if __name__ == '__main__':
 	topPostURL = getTopPostURL()
 	print('done.')
 
-	#print(f'The link is: {topPostLink}')
-	sendNotification(topPostURL)
+	sendNotification(shortenURL(topPostURL))
