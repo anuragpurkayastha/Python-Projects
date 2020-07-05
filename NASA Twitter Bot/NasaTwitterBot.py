@@ -33,6 +33,7 @@ def getNasaPOTD():
 
 	params = {
 		'api_key': str(api_key),
+		'hd': 'true'
 	}
 
 	url = 'https://api.nasa.gov/planetary/apod'
@@ -42,6 +43,7 @@ def getNasaPOTD():
 
 	resData = json.loads(res.text)
 
+	imageTitle = resData['title']
 	imageURL = resData['url']
 	shortImageURL = shortenURL(imageURL)
 	imageFilename = os.path.basename(imageURL)
@@ -53,7 +55,8 @@ def getNasaPOTD():
 		for chunk in res.iter_content(100000):
 			file.write(chunk)
 
-	return {'filename':imageFilename, 'url':shortImageURL}
+	#	Return info about the image
+	return {'filename':imageFilename, 'url':shortImageURL, 'title': imageTitle}
 
 def postToTwitter(filename, status):
 	"""
@@ -80,7 +83,7 @@ if __name__ == '__main__':
 
 	#	Post the image to twitter with a status.
 	postToTwitter(potd['filename'],
-		f"Check out today's Picture of the Day from NASA!\nCheck it out at {potd['url']}")
+		f"Check out today's Picture of the Day from NASA!\n\n{potd['title']}:")
 
 	#	Remove the downloaded image
 	os.remove(potd['filename'])
