@@ -23,7 +23,12 @@ def sendNotification(link):
 	api = tweepy.API(auth, wait_on_rate_limit=True,
 	    wait_on_rate_limit_notify=True)
 
-	api.update_status(r"Today's top post from Imgur: %s" % link)
+	try:
+		api.update_status(r"Today's top post from Imgur: %s" % link)
+	except tweepy.error.TweepError as err:
+		pass
+		#print("Could not post to Twitter. Error: %s" % str(err))
+
 
 def getTopPostURL():
 	'''
@@ -71,8 +76,8 @@ def shortenURL(url):
 if __name__ == '__main__':
 
 	#   Grab the top post
-	print('\nGetting top post URL from "Funny" on Imgur...',end='')
+	#print('\nGetting top post URL from "Funny" on Imgur...',end='')
 	topPostURL = getTopPostURL()
-	print('done.')
+	#print('done.')
 
 	sendNotification(shortenURL(topPostURL))
