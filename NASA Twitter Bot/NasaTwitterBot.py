@@ -4,25 +4,6 @@
 import json, requests, os, tweepy
 from pprint import pprint
 
-def shortenURL(url):
-	"""
-		Shorten the url
-	"""
-	headers = {
-	  'Authorization': 'Bearer %s' % os.getenv('BITLY_ACCESS_TOKEN'),
-	  'Content-Type': 'application/json'
-	}
-
-	payload = {
-		'long_url': url
-	}
-
-	res = requests.request('POST','https://api-ssl.bitly.com/v4/shorten',headers=headers,json=payload)
-	res.raise_for_status()
-	resData = json.loads(res.text)
-
-	return resData['link']
-
 def getNasaPOTD():
 	"""
 		This function queries the NASA API and downloads the POTD
@@ -45,7 +26,6 @@ def getNasaPOTD():
 
 	imageTitle = resData['title']
 	imageURL = resData['url']
-	shortImageURL = shortenURL(imageURL)
 	imageFilename = os.path.basename(imageURL)
 
 	res = requests.request('GET', imageURL)
@@ -56,7 +36,7 @@ def getNasaPOTD():
 			file.write(chunk)
 
 	#	Return info about the image
-	return {'filename':imageFilename, 'url':shortImageURL, 'title': imageTitle}
+	return {'filename':imageFilename, 'title': imageTitle}
 
 def postToTwitter(filename, status):
 	"""
