@@ -23,15 +23,18 @@ def getNewFilename(absImagePath, seqNo):
     basename = os.path.basename(absImagePath)
     fileExt = os.path.splitext(basename)[1]
     
+    '''
+        INPUT - LEADING TEXT
+    '''
     #   Leading filename text - CHANGE ACCORDING TO NEEDS
-    leadingText = #leading text
+    leadingText = "IMG" # LEADING TEXT
     
     try:
         #   Open the image to extract the EXIF data and get the date the picture was taken
         image = Image.open(absImagePath)
         image_date_taken = image._getexif()[36867]    #   Get the datetime field in the EXIF data - returns 'yyyy:mm:dd hh:mm:ss' string
 
-        #   Create a regex to extract the year, month and day from the image_date
+        #   Create a regex to extract the year, month and day from the image_date_taken
         imageDateRegex = re.compile(r'''(
             ^(\d{4})    #   Year - Group 2
             :           #   Seperator
@@ -65,8 +68,11 @@ def getNewFilename(absImagePath, seqNo):
 #   MAIN
 if __name__ == '__main__':
     
+    '''
+        INPUT - WINDOWS DIRECTORY
+    '''
     #   Directory containing the images to rename - CHANGE AS REQUIRED
-    windowsPath = PureWindowsPath(r"\path\to\folder")   #   Required on Windows platforms.
+    windowsPath = PureWindowsPath(r"/PATH/TO/FOLDER/")   #   Required on Windows platforms.
     IMAGE_DIR = Path(windowsPath.as_posix())
 
     #   Loop through each item in the directory and rename the item if it is a file.
