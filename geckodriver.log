@@ -1,7 +1,0 @@
-1592296147886	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileLzEl32"
-*** You are running in headless mode.
-1592296150102	Marionette	INFO	Listening on port 33045
-1592296150200	Marionette	WARN	TLS certificate errors will be ignored for this session
-JavaScript warning: https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
-JavaScript error: https://www.melton.vic.gov.au/files/oc-templates/00000000-0000-0000-0000-000000000000/7d7464b8-f248-4433-b870-efe915aca122/external_plugins.js~oc_form_helper.js~oc_main.js~plugins.js~oc_main_init.js~OcScriptCombine_Minify0?uniqueid=20200515053929, line 47: TypeError: $(...).matchHeight is not a function
-1592301891431	Marionette	INFO	Stopped listening on port 33045
