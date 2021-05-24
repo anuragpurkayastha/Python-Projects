@@ -17,7 +17,12 @@ from selenium.webdriver.firefox.options import Options
 from bs4 import BeautifulSoup
 from pprint import pprint
 
-print("Gathering bin collection information...\n")
+#================================ END IMPORTS ==============================================
+
+''' MELTON ADDRESS '''
+MELTON_ADDR = "13 Borrowdale Rd"
+
+print('Gathering bin collection information for %s...\n' % MELTON_ADDR.upper())
 
 #   Implement the WebDriver for Firefox
 
@@ -26,6 +31,7 @@ driverOpts = Options()
 driverOpts.add_argument('-headless')
 driver = webdriver.Firefox(options = driverOpts)
 wait = WebDriverWait(driver,10) #   Wait 10 seconds for page elements to load.
+
 
 #       MELTON
 #   Search for the residential address and wait for the response
@@ -38,7 +44,7 @@ try:
 
     #   Search for the address
     search = driver.find_element_by_id('intramaps-full-text-search')    #   Search bar
-    search.send_keys("13 Borrowdale Rd")   #   Address to search for
+    search.send_keys(MELTON_ADDR)   #   Address to search for
     search.send_keys(Keys.ENTER)    #   Press ENTER
 
     #   Wait for the 'Waste days' element to load
