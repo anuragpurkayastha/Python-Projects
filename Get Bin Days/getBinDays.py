@@ -38,7 +38,7 @@ try:
 
     #   Search for the address
     search = driver.find_element_by_id('intramaps-full-text-search')    #   Search bar
-    search.send_keys("14 Fellows St")   #   Address to search for
+    search.send_keys("13 Borrowdale Rd")   #   Address to search for
     search.send_keys(Keys.ENTER)    #   Press ENTER
 
     #   Wait for the 'Waste days' element to load
